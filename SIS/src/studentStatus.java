@@ -26,11 +26,40 @@ public class studentStatus
 					{
 						deleteStudents();
 					}
+				else
+					{
+						runSIS.displayMenu();
+					}
 			}
 
 		public static void addStudents()
 			{
-
+				System.out.println("What is the student's first name?");
+				Scanner userInfo = new Scanner(System.in);
+				String newStudent = userInfo.nextLine();
+				runSIS.listOfStudents.add(new Student.firstname(newStudent));
+				
+				System.out.println("Last name?");
+				String newStudentLN = userInfo.nextLine();
+				runSIS.listOfStudents.add(new Student.lastname(newStudentLN));
+				
+				System.out.println("What is the student's first period?");
+				String newStudentFP = userInfo.nextLine();
+				
+				System.out.println("First period grade?");
+				String newStudentFPG = userInfo.nextLine();
+				
+				System.out.println("Second period?");
+				String newStudentSP = userInfo.nextLine();
+				
+				System.out.println("Second period grade?");
+				String newStudentSPG = userInfo.nextLine();
+				
+				System.out.println("Third period?");
+				String newStudentTP = userInfo.nextLine();
+				
+				System.out.println("Third period grade?");
+				String newStudentTPG = userInfo.nextLine();
 			}
 
 		public static void deleteStudents()
