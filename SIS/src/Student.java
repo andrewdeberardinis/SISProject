@@ -6,18 +6,17 @@ public class Student
 		private String lastname;
 		private double gpa;
 		private String firstperiod;
-		private String secondperiod;
-		private String thirdperiod;
 		private String firstgrade;
+		private String secondperiod;
 		private String secondgrade;
+		private String thirdperiod;
 		private String thirdgrade;
 		
-		public Student(String fn, String ln, double g, String fp, String sp, String tp, String fg, String sg, String tg)
+		public Student(String fn, String ln, String fp, String sp, String tp, String fg, String sg, String tg)
 		{
 		
 		firstname = fn;
 		lastname = ln;
-		gpa = g;
 		firstperiod = fp;
 		secondperiod = sp;
 		thirdperiod = tp;

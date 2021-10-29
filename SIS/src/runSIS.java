@@ -1,17 +1,25 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 
 public class runSIS
 	{
+		static ArrayList<Student> listOfStudents = new ArrayList<Student>();
+		
 		public static void main(String[] args) throws IOException
 			{
-
 				Scanner file = new Scanner(new File("StudentList.txt"));
-				String tempString = file.nextLine();
-				String[] filler = tempString.split(" ");
-
+				while(file.hasNext())
+					{
+						String tempString = file.nextLine();
+						String[] filler = tempString.split(" ");
+						listOfStudents.add(new Student(filler[0],filler[1],filler[2],filler[3],filler[4],filler[5],filler[6],filler[7]));
+					}
+				displayMenu();
+				displayStudentList();
 			}
+		
 		public static void displayMenu()
 			{
 				Scanner userIntInput = new Scanner(System.in);
@@ -36,6 +44,14 @@ public class runSIS
 					{
 						System.out.println("You must pick either 1, 2 or 3");
 						displayMenu();
+					}
+			}
+		
+		public static void displayStudentList()
+			{
+				for(Student s : listOfStudents)
+					{
+						System.out.println(s.getFirstname() + s.getLastname() + s.getFirstperiod() + s.getFirstgrade() + s.getSecondperiod() + s.getSecondgrade() + s.getThirdperiod() + s.getThirdgrade());
 					}
 			}
 	
