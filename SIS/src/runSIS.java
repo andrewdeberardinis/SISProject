@@ -1,15 +1,22 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 
 public class runSIS
 	{
+		static ArrayList<Student> StudentList = new ArrayList<Student>( );
 		public static void main(String[] args) throws IOException
 			{
 
 				Scanner file = new Scanner(new File("StudentList.txt"));
-				String tempString = file.nextLine();
-				String[] filler = tempString.split(" ");
+				while(file.hasNext())
+					{
+						String tempString = file.nextLine();
+						String[] filler = tempString.split(" ");
+					
+					}
+				
 
 			}
 		public static void displayMenu()
