@@ -3,6 +3,16 @@ import java.util.Scanner;
 public class studentStatus
 	{
 
+		static Scanner input = new Scanner(System.in);
+		static String firstName;
+		static String lastName;
+		static String firstPeriod;
+		static String FPGrade;
+		static String secondPeriod;
+		static String SPGrade;
+		static String thirdPeriod;
+		static String TPGrade;
+		
 		public static void main(String[] args)
 			{
 				
@@ -10,12 +20,11 @@ public class studentStatus
 
 		public static void studentAction()
 			{
-				Scanner userIntInput = new Scanner(System.in);
 				System.out.println("would you like to do?");
 				System.out.println("(1) - add a student");
 				System.out.println("(2) - delete a student");
 				System.out.println("(3) - return to the main menu");
-				int userChoice = userIntInput.nextInt();
+				int userChoice = input.nextInt();
 
 				if (userChoice == 1)
 					{
@@ -35,36 +44,53 @@ public class studentStatus
 		public static void addStudents()
 			{
 				System.out.println("What is the student's first name?");
-				Scanner userInfo = new Scanner(System.in);
-				String newStudent = userInfo.nextLine();
-				runSIS.listOfStudents.add(new Student.firstname(newStudent));
+				firstName = input.nextLine();
 				
 				System.out.println("Last name?");
-				String newStudentLN = userInfo.nextLine();
-				runSIS.listOfStudents.add(new Student.lastname(newStudentLN));
+				lastName = input.nextLine();
 				
 				System.out.println("What is the student's first period?");
-				String newStudentFP = userInfo.nextLine();
+				firstPeriod = input.nextLine();
 				
 				System.out.println("First period grade?");
-				String newStudentFPG = userInfo.nextLine();
+				FPGrade = input.nextLine();
 				
 				System.out.println("Second period?");
-				String newStudentSP = userInfo.nextLine();
+				secondPeriod = input.nextLine();
 				
 				System.out.println("Second period grade?");
-				String newStudentSPG = userInfo.nextLine();
+				SPGrade = input.nextLine();
 				
 				System.out.println("Third period?");
-				String newStudentTP = userInfo.nextLine();
+				thirdPeriod = input.nextLine();
 				
 				System.out.println("Third period grade?");
-				String newStudentTPG = userInfo.nextLine();
+				TPGrade = input.nextLine();
+				
+				runSIS.listOfStudents.add(new Student(firstName, lastName, firstPeriod, FPGrade,
+													secondPeriod, SPGrade, thirdPeriod, TPGrade));
+				
+				runSIS.displayMenu();
 			}
 
 		public static void deleteStudents()
 			{
-
+				int menuCounter = 1;
+				for(Student s : runSIS.listOfStudents)
+					{
+						System.out.print(menuCounter + ") ");
+						System.out.println(s.getFirstname() + s.getLastname() + s.getFirstperiod() +
+											s.getFirstgrade() + s.getSecondperiod() + s.getSecondgrade() +
+											s.getThirdperiod() + s.getThirdgrade());
+						menuCounter++;
+					}
+				
+				System.out.println("Which student would you like to delete?");
+				String deleteInput = input.next() + 1;
+				
+				runSIS.listOfStudents.remove(deleteInput);
+				
+				runSIS.displayMenu();
 			}
 
 	}
