@@ -4,6 +4,6 @@ public class PeriodSorter implements Comparator<Student>
 	{
 		public int compare(Student s1, Student s2)
 		{
-			return s1.getFirstPeriod().compareTo(s2.getFirstPeriod());
+			return s1.getFirstperiod().compareTo(s2.getFirstperiod());
 		}
 	}
