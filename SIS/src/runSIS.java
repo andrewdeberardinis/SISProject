@@ -5,8 +5,12 @@ import java.io.IOException;
 
 public class runSIS
 	{
+
+	
+
 		static ArrayList<Student> listOfStudents = new ArrayList<Student>();
 		
+
 		public static void main(String[] args) throws IOException
 			{
 				Scanner file = new Scanner(new File("StudentList.txt"));
@@ -14,11 +18,15 @@ public class runSIS
 					{
 						String tempString = file.nextLine();
 						String[] filler = tempString.split(" ");
-						listOfStudents.add(new Student(filler[0],filler[1],filler[2],filler[3],filler[4],filler[5],filler[6],filler[7]));
+
+					listOfStudents.add(new Student(filler[0],filler[1],filler[2],filler[3],filler[4],filler[5],filler[6],filler[7]));
 					}
-				displayMenu();
+					
+					}
+			//	displayMenu();
 				//displayStudentList();
-			}
+
+			
 		
 		public static void displayMenu()
 			{
