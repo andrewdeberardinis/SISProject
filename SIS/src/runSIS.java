@@ -30,7 +30,7 @@ public class runSIS
 				int userChoice = userIntInput.nextInt();
 				if(userChoice == 1)
 					{
-						
+						studentStatus.studentAction();
 					}
 				else if(userChoice == 2)
 					{
