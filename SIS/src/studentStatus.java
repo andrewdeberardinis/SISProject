@@ -13,11 +13,6 @@ public class studentStatus
 		static String thirdPeriod;
 		static String TPGrade;
 		
-		public static void main(String[] args)
-			{
-				
-			}
-
 		public static void studentAction()
 			{
 				System.out.println("would you like to do?");
