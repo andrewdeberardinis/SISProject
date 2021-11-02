@@ -224,6 +224,9 @@ public class GPACalculator
 					cumGPA = firstGPA + secondGPA + thirdGPA;
 					cumGPA = cumGPA/3;
 					
+			          DecimalFormat d = new DecimalFormat("0.00");
+			          System.out.println((d.format(cumGPA)));
+					
 					
 			
 			
