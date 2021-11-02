@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class ChangeStudentClass
 	{
+		//this is a comment ahhaahahhahah
 		public static void change()
 		{
 			Scanner userIntInput = new Scanner(System.in);
