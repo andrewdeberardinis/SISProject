@@ -21,9 +21,9 @@ public class runSIS
 
 					listOfStudents.add(new Student(filler[0],filler[1],filler[2],filler[3],filler[4],filler[5],filler[6],filler[7]));
 					}
-					
+					displayMenu();
 					}
-			//	displayMenu();
+				
 				//displayStudentList();
 
 			
@@ -42,11 +42,11 @@ public class runSIS
 					}
 				else if(userChoice == 2)
 					{
-						
+						ChangeStudentClass.change();
 					}
 				else if(userChoice == 3)
 					{
-						
+						SortingMenu.sortingChoices();
 					}
 				else
 					{
