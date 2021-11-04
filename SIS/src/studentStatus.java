@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class studentStatus
 	{
 
-		static Scanner input = new Scanner(System.in);
+		static Scanner stringInput = new Scanner(System.in);
+	
 		static String firstName;
 		static String lastName;
 		static String firstPeriod;
@@ -13,14 +14,16 @@ public class studentStatus
 		static String thirdPeriod;
 		static String TPGrade;
 		
+		
+
 		public static void studentAction()
 			{
 				System.out.println("would you like to do?");
 				System.out.println("(1) - add a student");
 				System.out.println("(2) - delete a student");
 				System.out.println("(3) - return to the main menu");
-				int userChoice = input.nextInt();
-
+				int userChoice = stringInput.nextInt();
+				stringInput.nextLine();
 				if (userChoice == 1)
 					{
 						addStudents();
@@ -38,29 +41,30 @@ public class studentStatus
 
 		public static void addStudents()
 			{
+			
 				System.out.println("What is the student's first name?");
-				firstName = input.nextLine();
+				firstName = stringInput.nextLine();
 				
 				System.out.println("Last name?");
-				lastName = input.nextLine();
+				lastName = stringInput.nextLine();
 				
 				System.out.println("What is the student's first period?");
-				firstPeriod = input.nextLine();
+				firstPeriod = stringInput.nextLine();
 				
 				System.out.println("First period grade?");
-				FPGrade = input.nextLine();
+				FPGrade = stringInput.nextLine();
 				
 				System.out.println("Second period?");
-				secondPeriod = input.nextLine();
+				secondPeriod = stringInput.nextLine();
 				
 				System.out.println("Second period grade?");
-				SPGrade = input.nextLine();
+				SPGrade = stringInput.nextLine();
 				
 				System.out.println("Third period?");
-				thirdPeriod = input.nextLine();
+				thirdPeriod = stringInput.nextLine();
 				
 				System.out.println("Third period grade?");
-				TPGrade = input.nextLine();
+				TPGrade = stringInput.nextLine();
 				
 				runSIS.listOfStudents.add(new Student(firstName, lastName, firstPeriod, FPGrade,
 													secondPeriod, SPGrade, thirdPeriod, TPGrade));
@@ -81,7 +85,7 @@ public class studentStatus
 					}
 				
 				System.out.println("Which student would you like to delete?");
-				String deleteInput = input.next() + 1;
+				String deleteInput = stringInput.next() + 1;
 				
 				runSIS.listOfStudents.remove(deleteInput);
 				
