@@ -27,7 +27,7 @@ public class runSIS
 				//displayStudentList();
 
 			
-		
+		//menu is fixed
 		public static void displayMenu()
 			{
 				Scanner userIntInput = new Scanner(System.in);
