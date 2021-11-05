@@ -2,11 +2,12 @@ import java.util.Scanner;
 
 public class ChangeStudentClass
 	{
-		//this is a comment ahhaahahhahah
+		
 		public static void change()
 		{
 			Scanner userIntInput = new Scanner(System.in);
 			Scanner userStringInput = new Scanner(System.in);
+			//displays students
 			System.out.println("These are the current students");
 			for(int i = 0; i < runSIS.listOfStudents.size(); i++)
 				{
@@ -17,7 +18,7 @@ public class ChangeStudentClass
 			System.out.println("(2) - Class");
 			int decision = userIntInput.nextInt();
 			
-		if(decision == 1)
+		if(decision == 1) //changing the grade code
 				{
 					System.out.println("What student do you want to change?");
 					int studentChoice = userIntInput.nextInt();
@@ -29,9 +30,64 @@ public class ChangeStudentClass
 			
 			if(periodChoice == 1)
 				{
+					//
 					System.out.println("What do you want to change this class to?");
-					String changeClass = userStringInput.nextLine();
-					runSIS.listOfStudents.get(studentChoice - 1).setFirstperiod(changeClass);
+					System.out.println("(1) - Biology");
+					System.out.println("(2) - Algebra");
+					System.out.println("(3) - English");
+					int changeClass = userIntInput.nextInt();
+					if(changeClass == 1)
+						{
+							runSIS.listOfStudents.get(studentChoice - 1).setSecondperiod("Biology");
+							System.out.println("That class has been changed");
+							System.out.println("Where do you want to go next");
+							System.out.println("(1) - Return to Main Menu");
+							System.out.println("(2) - Change Another Student");
+							int moveDecision = userStringInput.nextInt();
+							if(moveDecision == 1)
+								{
+									runSIS.displayMenu();
+								}
+							else if(moveDecision == 2)
+								{
+									change();
+								}
+							
+						}
+					else if(changeClass == 2)
+						{
+							runSIS.listOfStudents.get(studentChoice - 1).setSecondperiod("Algebra");
+							System.out.println("That class has been changed");
+							System.out.println("Where do you want to go next");
+							System.out.println("(1) - Return to Main Menu");
+							System.out.println("(2) - Change Another Student");
+							int moveDecision = userStringInput.nextInt();
+							if(moveDecision == 1)
+								{
+									runSIS.displayMenu();
+								}
+							else if(moveDecision == 2)
+								{
+									change();
+								}
+						}
+					else if(changeClass == 3)
+						{
+							runSIS.listOfStudents.get(studentChoice - 1).setSecondperiod("English");
+							System.out.println("That class has been changed");
+							System.out.println("Where do you want to go next");
+							System.out.println("(1) - Return to Main Menu");
+							System.out.println("(2) - Change Another Student");
+							int moveDecision = userStringInput.nextInt();
+							if(moveDecision == 1)
+								{
+									runSIS.displayMenu();
+								}
+							else if(moveDecision == 2)
+								{
+									change();
+								}
+						}
 				}
 			else if(periodChoice == 2)
 				{
