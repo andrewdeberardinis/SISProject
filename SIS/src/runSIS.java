@@ -21,10 +21,10 @@ public class runSIS
 
 					listOfStudents.add(new Student(filler[0],filler[1],filler[2],filler[3],filler[4],filler[5],filler[6],filler[7]));
 					}
-					
-					}
-			//	displayMenu();
-				//displayStudentList();
+					displayStudentList1();
+			}
+			//	
+				//displayStudentList1();
 
 			
 		
@@ -55,12 +55,16 @@ public class runSIS
 					}
 			}
 		
-		public static void displayStudentList()
+		public static void displayStudentList1()
 			{
 				for(Student s : listOfStudents)
 					{
-						System.out.println(s.getFirstname() + s.getLastname() + s.getFirstperiod() + s.getFirstgrade() + s.getSecondperiod() + s.getSecondgrade() + s.getThirdperiod() + s.getThirdgrade());
+						System.out.printf("%18-s" , " Name " , s.getFirstname() + " " + s.getLastname());
+						System.out.printf("GPA: %.2f" , s.getGpa());
+						System.out.printf("%8-s %2-s" , " P1 " + s.getFirstperiod() , s.getFirstgrade());
+						System.out.printf("%8-s %2-s" , " P2 " + s.getSecondperiod() , s.getSecondgrade());
+						System.out.printf("%8-s %2-s" , " P3 " + s.getThirdperiod() , s.getThirdgrade()) + "\n";
 					}
 			}
-	
+
 	}
