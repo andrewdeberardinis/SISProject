@@ -13,6 +13,7 @@ public class runSIS
 
 		public static void main(String[] args) throws IOException
 			{
+				//main method takes the student text and sends it into an array list
 				Scanner file = new Scanner(new File("StudentList.txt"));
 				while(file.hasNext())
 					{
@@ -38,23 +39,27 @@ public class runSIS
 				int userChoice = userIntInput.nextInt();
 				if(userChoice == 1)
 					{
+						//sends user to the studentAction class
 						studentStatus.studentAction();
 					}
 				else if(userChoice == 2)
 					{
+						//sends user to the changing student grade and schedule class
 						ChangeStudentClass.change();
 					}
 				else if(userChoice == 3)
 					{
+						//sends user to the sorting menu before asking them how they want to sort
 						SortingMenu.sortingChoices();
 					}
 				else
 					{
+						//#breakproof
 						System.out.println("You must pick either 1, 2 or 3");
 						displayMenu();
 					}
 			}
-		
+		//displayStudentList method displays students
 		public static void displayStudentList()
 			{
 				for(Student s : listOfStudents)
