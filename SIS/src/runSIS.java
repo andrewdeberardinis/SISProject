@@ -36,6 +36,7 @@ public class runSIS
 				System.out.println("(1) - add or delete a student");
 				System.out.println("(2) - change student grades/schedule");
 				System.out.println("(3) - sort students");
+				System.out.println("(4) - display the students");
 				int userChoice = userIntInput.nextInt();
 				if(userChoice == 1)
 					{
@@ -51,6 +52,11 @@ public class runSIS
 					{
 						//sends user to the sorting menu before asking them how they want to sort
 						SortingMenu.sortingChoices();
+					}
+				else if(userChoice == 4)
+					{
+						//displays the student list
+						displayStudentList();
 					}
 				else
 					{
