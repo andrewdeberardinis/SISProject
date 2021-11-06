@@ -1,9 +1,11 @@
 import java.util.Scanner;
-
+import java.text.DecimalFormat;
 public class ShowingParentsGPA {
-	
+	 
+    // System.out.println((d.format(cumGPA)));
 	public static void showingParents()
 	{
+		DecimalFormat d = new DecimalFormat("0.00");
 		Scanner userIntInput = new Scanner(System.in);
 		Scanner userStringInput = new Scanner(System.in);
 		System.out.println("These are the current students");
@@ -31,24 +33,24 @@ public class ShowingParentsGPA {
 			System.out.print("Mr and Mrs " + runSIS.listOfStudents.get(studentChoice - 1).getLastname() + ", Your daughter's GPA is: ");
 			if(runSIS.listOfStudents.get(studentChoice - 1).getGpa() == 4.00)
 			{
-				System.out.print(runSIS.listOfStudents.get(studentChoice - 1).getGpa());
+				System.out.print((d.format(runSIS.listOfStudents.get(studentChoice - 1).getGpa())));
 				System.out.println();
 			}
 			
 			else if(runSIS.listOfStudents.get(studentChoice - 1).getGpa() <= 3.50)
 			{
-				System.out.println(runSIS.listOfStudents.get(studentChoice - 1).getGpa() + .5);
+				System.out.println((d.format(runSIS.listOfStudents.get(studentChoice - 1).getGpa() + .5)));
 			}
 			
 			else if(runSIS.listOfStudents.get(studentChoice - 1).getGpa() <= 3.00)
 			{
-				System.out.print(runSIS.listOfStudents.get(studentChoice - 1).getGpa() + 1);
+				System.out.print((d.format(runSIS.listOfStudents.get(studentChoice - 1).getGpa() + 1)));
 				System.out.println();
 			}
 			
 			else
 			{
-				System.out.println(runSIS.listOfStudents.get(studentChoice - 1).getGpa());
+				System.out.println((d.format(runSIS.listOfStudents.get(studentChoice - 1).getGpa())));
 			}
 			break;
 		}
@@ -68,24 +70,24 @@ public class ShowingParentsGPA {
 			System.out.print("Mr and Mrs " + runSIS.listOfStudents.get(studentChoice - 1).getLastname() + ", Your son's GPA is: ");
 			if(runSIS.listOfStudents.get(studentChoice - 1).getGpa() == 4.00)
 			{
-				System.out.print(runSIS.listOfStudents.get(studentChoice - 1).getGpa());
+				System.out.print((d.format(runSIS.listOfStudents.get(studentChoice - 1).getGpa())));
 				System.out.println();
 			}
 			
 			else if(runSIS.listOfStudents.get(studentChoice - 1).getGpa() <= 3.50)
 			{
-				System.out.println(runSIS.listOfStudents.get(studentChoice - 1).getGpa() + .5);
+				System.out.println((d.format(runSIS.listOfStudents.get(studentChoice - 1).getGpa() + .5)));
 			}
 			
 			else if(runSIS.listOfStudents.get(studentChoice - 1).getGpa() <= 3.00)
 			{
-				System.out.print(runSIS.listOfStudents.get(studentChoice - 1).getGpa() + 1);
+				System.out.print((d.format(runSIS.listOfStudents.get(studentChoice - 1).getGpa() + 1)));
 				System.out.println();
 			}
 			
 			else
 			{
-				System.out.println(runSIS.listOfStudents.get(studentChoice - 1).getGpa());
+				System.out.println((d.format(runSIS.listOfStudents.get(studentChoice - 1).getGpa())));
 			}
 			break;
 		}
