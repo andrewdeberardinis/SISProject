@@ -22,7 +22,8 @@ public class runSIS
 
 					listOfStudents.add(new Student(filler[0],filler[1],filler[2],filler[3],filler[4],filler[5],filler[6],filler[7]));
 					}
-
+				//GPACalculator.GPACounter();
+					GPACalcV2.GPACounter();
 					displayMenu();
     }
 				
@@ -39,6 +40,7 @@ public class runSIS
 				System.out.println("(2) - change student grades/schedule");
 				System.out.println("(3) - sort students");
 				System.out.println("(4) - display the students");
+				System.out.println("(5) - Show the parents a GPA");
 				int userChoice = userIntInput.nextInt();
 				if(userChoice == 1)
 					{
@@ -60,6 +62,10 @@ public class runSIS
 						//displays the student list
 						displayStudentList();
 					}
+				else if(userChoice == 5)
+				{
+					ShowingParentsGPA.showingParents();
+				}
 				else
 					{
 						//#breakproof
