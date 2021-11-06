@@ -23,12 +23,10 @@ public class GPACalculator
 						{
 							firstGPA = firstGPA + 4.00;
 						}
-					
-					else if(runSIS.listOfStudents.get(i).getSecondgrade().equals("A+"))
+					else if(runSIS.listOfStudents.get(i).getFirstgrade().equals("A+"))
 						{
-							secondGPA = secondGPA + 4.00;
+							firstGPA = firstGPA + 4.00;
 						}
-					
 					else if(runSIS.listOfStudents.get(i).getFirstgrade().equals("A-"))
 						{
 							firstGPA = firstGPA + 3.70;
@@ -92,12 +90,10 @@ public class GPACalculator
 						{
 							secondGPA = secondGPA + 4.00;
 						}
-					
-					else if(runSIS.listOfStudents.get(i).getSecondgrade().equals("A+"))
+					else if(runSIS.listOfStudents.get(i).getFirstgrade().equals("A+"))
 						{
-							secondGPA = secondGPA + 4.00;
+							firstGPA = firstGPA + 4.00;
 						}
-					
 					else if(runSIS.listOfStudents.get(i).getSecondgrade().equals("A-"))
 						{
 							secondGPA = secondGPA+ 3.70;
@@ -161,11 +157,10 @@ public class GPACalculator
 						{
 							thirdGPA = thirdGPA + 4.00;
 						}
-					else if(runSIS.listOfStudents.get(i).getThirdgrade().equals("A+"))
+					else if(runSIS.listOfStudents.get(i).getFirstgrade().equals("A+"))
 						{
-							thirdGPA = thirdGPA + 4.00;
+							firstGPA = firstGPA + 4.00;
 						}
-					
 					else if(runSIS.listOfStudents.get(i).getThirdgrade().equals("A-"))
 						{
 							thirdGPA = thirdGPA + 3.70;
@@ -223,6 +218,11 @@ public class GPACalculator
 					
 					cumGPA = firstGPA + secondGPA + thirdGPA;
 					cumGPA = cumGPA/3;
+					
+			        DecimalFormat d = new DecimalFormat("0.00");
+			        System.out.println((d.format(cumGPA)));
+			          
+			        runSIS.listOfStudents.get(i).setGpa(cumGPA);  
 					
 					
 			

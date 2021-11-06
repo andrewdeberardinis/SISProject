@@ -10,7 +10,7 @@ public class ChangeStudentClass
 			System.out.println("These are the current students");
 			for(int i = 0; i < runSIS.listOfStudents.size(); i++)
 				{
-					System.out.println("(" + i + 1 + ")" + runSIS.listOfStudents.get(i).getLastname() + ", " + runSIS.listOfStudents.get(i).getFirstname());
+					System.out.println("(" + (i + 1) + ") " + runSIS.listOfStudents.get(i).getLastname() + ", " + runSIS.listOfStudents.get(i).getFirstname());
 				}
 			System.out.println("Do you want to change a student or a grade");
 			System.out.println("(1) - Grade");
@@ -23,8 +23,8 @@ public class ChangeStudentClass
 					int studentChoice = userIntInput.nextInt();
 					System.out.println("Which period do you want to change?");
 					System.out.println("(1) - " + runSIS.listOfStudents.get(studentChoice - 1).getFirstperiod());
-					System.out.println("(2) - " + runSIS.listOfStudents.get(studentChoice - 1).getFirstperiod());
-					System.out.println("(3) - " + runSIS.listOfStudents.get(studentChoice - 1).getFirstperiod());
+					System.out.println("(2) - " + runSIS.listOfStudents.get(studentChoice - 1).getSecondperiod());
+					System.out.println("(3) - " + runSIS.listOfStudents.get(studentChoice - 1).getThirdperiod());
 					int periodChoice = userIntInput.nextInt();
 			
 			if(periodChoice == 1)
@@ -36,8 +36,68 @@ public class ChangeStudentClass
 			else if(periodChoice == 2)
 				{
 					System.out.println("What do you want to change this class to?");
-					String changeClass = userStringInput.nextLine();
-					runSIS.listOfStudents.get(studentChoice - 1).setSecondperiod(changeClass);
+					System.out.println("(1) - Biology");
+					System.out.println("(2) - Algebra");
+					System.out.println("(3) - English");
+					int changeClass = userStringInput.nextInt();
+					if(changeClass == 1)
+						{
+							runSIS.listOfStudents.get(studentChoice - 1).setSecondperiod("Biology");
+							System.out.println("That class has been changed");
+							System.out.println("Where do you want to go next");
+							System.out.println("(1) - Return to Main Menu");
+							System.out.println("(2) - Change Another Student");
+							int moveDecision = userStringInput.nextInt();
+							if(moveDecision == 1)
+								{
+									runSIS.displayMenu();
+								}
+							else if(moveDecision == 2)
+								{
+									change();
+								}
+							
+						}
+					else if(changeClass == 2)
+						{
+							runSIS.listOfStudents.get(studentChoice - 1).setSecondperiod("Algebra");
+							System.out.println("That class has been changed");
+							System.out.println("Where do you want to go next");
+							System.out.println("(1) - Return to Main Menu");
+							System.out.println("(2) - Change Another Student");
+							int moveDecision = userStringInput.nextInt();
+							if(moveDecision == 1)
+								{
+									runSIS.displayMenu();
+								}
+							else if(moveDecision == 2)
+								{
+									change();
+								}
+						}
+					else if(changeClass == 3)
+						{
+							runSIS.listOfStudents.get(studentChoice - 1).setSecondperiod("English");
+							System.out.println("That class has been changed");
+							System.out.println("Where do you want to go next");
+							System.out.println("(1) - Return to Main Menu");
+							System.out.println("(2) - Change Another Student");
+							int moveDecision = userStringInput.nextInt();
+							if(moveDecision == 1)
+								{
+									runSIS.displayMenu();
+								}
+							else if(moveDecision == 2)
+								{
+									change();
+								}
+						}
+					else
+						{
+							System.out.println("You need to pick either 1, 2, or 3");
+							change();
+						}
+					
 
 				}
 			else if(periodChoice == 3)
@@ -55,8 +115,8 @@ public class ChangeStudentClass
 					int studentChoice = userIntInput.nextInt();
 					System.out.println("Which period do you want to change?");
 					System.out.println("(1) - " + runSIS.listOfStudents.get(studentChoice - 1).getFirstperiod() + " - " + runSIS.listOfStudents.get(studentChoice - 1).getFirstgrade());
-					System.out.println("(2) - " + runSIS.listOfStudents.get(studentChoice - 1).getFirstperiod() + " - " + runSIS.listOfStudents.get(studentChoice - 1).getSecondgrade());
-					System.out.println("(3) - " + runSIS.listOfStudents.get(studentChoice - 1).getFirstperiod() + " - " + runSIS.listOfStudents.get(studentChoice - 1).getThirdgrade());
+					System.out.println("(2) - " + runSIS.listOfStudents.get(studentChoice - 1).getSecondperiod() + " - " + runSIS.listOfStudents.get(studentChoice - 1).getSecondgrade());
+					System.out.println("(3) - " + runSIS.listOfStudents.get(studentChoice - 1).getThirdperiod() + " - " + runSIS.listOfStudents.get(studentChoice - 1).getThirdgrade());
 					int periodChoice = userIntInput.nextInt();
 					
 					if(periodChoice == 1)
@@ -80,6 +140,11 @@ public class ChangeStudentClass
 
 						}
 				}
+		else
+			{
+				System.out.println("You must either pick 1 or 2");
+				change();
+			}
 			
 		}
 	}
