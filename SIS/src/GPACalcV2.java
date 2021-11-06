@@ -1,6 +1,6 @@
 import java.text.DecimalFormat;
 public class GPACalcV2 {
-
+//fixed GPA calculator Code
 	static double firstGPA = 0;
 	static double secondGPA = 0;
 	static double thirdGPA = 0;
