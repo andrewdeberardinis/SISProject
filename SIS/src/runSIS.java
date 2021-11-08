@@ -22,10 +22,14 @@ public class runSIS
 
 					listOfStudents.add(new Student(filler[0],filler[1],filler[2],filler[3],filler[4],filler[5],filler[6],filler[7]));
 					}
-					GPACalcV2.GPACounter();
-					displayMenu();
-    }
-				
+						GPACalcV2.GPACounter(); // calling on GPA calculator
+						displayMenu(); // display beginning of the program
+					}
+			
+
+
+			
+
 				//displayStudentList();
 
 
@@ -63,13 +67,13 @@ public class runSIS
 					}
 				else if(userChoice == 5)
 				{
-					ShowingParentsGPA.showingParents();
+					ShowingParentsGPA.showingParents(); // display to parents the GPA of their kids
 				}
 				else
 					{
 						//#breakproof
-						System.out.println("You must pick either 1, 2 or 3");
-						displayMenu();
+						System.out.println("You must pick either 1, 2 or 3"); // if user input is not within the bounds of options
+						displayMenu(); // calling on menu again to make user input a viable option
 					}
 			}
 
