@@ -95,9 +95,9 @@ public class runSIS
 				//this code might potentially maybe work
 				
 				
-				System.out.println("Where do you want to go next?");
-				System.out.println("(1) - Return to Main Menu");
-				System.out.println("(2) - Sort by another method");
+				System.out.println("Hit (1) to return to Main Menu");
+			
+				
 				
 				Scanner supa = new Scanner(System.in);
 				int supaanswer; 
@@ -111,13 +111,6 @@ public class runSIS
 						displayMenu();
 					}
 				
-				// Option 2
-				
-				else if (supaanswer == 2)
-					{
-						System.out.println("Going back to Sorter menu");
-						SortingMenu.sortingChoices();
-					}
 				else 
 					{
 						System.out.println("Returning to main menu...");
