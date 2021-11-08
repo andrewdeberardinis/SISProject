@@ -41,7 +41,7 @@ public class studentStatus
 
 		public static void addStudents()
 			{
-			
+			//gains information for the students
 				System.out.println("What is the student's first name?");
 				firstName = stringInput.nextLine();
 				
