@@ -68,7 +68,7 @@ public class studentStatus
 				
 				runSIS.listOfStudents.add(new Student(firstName, lastName, firstPeriod, FPGrade,
 													secondPeriod, SPGrade, thirdPeriod, TPGrade));
-				
+				System.out.println("That student has been added");
 				runSIS.displayMenu();
 			}
 
