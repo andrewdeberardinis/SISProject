@@ -85,6 +85,36 @@ public class runSIS
 						System.out.printf("%-8s %-2s" , " P2 " + s.getSecondperiod() , s.getSecondgrade());
 						System.out.printf("%-8s %-2s" , " P3 " + s.getThirdperiod() , s.getThirdgrade() + "\n");
 					} 
+				
+				// go back to menu option
+				
+				System.out.println("Where do you want to go next");
+				System.out.println("(1) - Return to Main Menu");
+				System.out.println("(2) - Sort by another method");
+				
+				Scanner supa = new Scanner(System.in);
+				int supaanswer; 
+				supaanswer = supa.nextInt();
+				
+				if(supaanswer == 1)
+					{
+						System.out.println("Returning to main menu...");
+						displayMenu();
+					}
+				
+				else if (supaanswer == 2)
+					{
+						System.out.println("Going back to Sorter menu");
+						SortingMenu.sortingChoices();
+					}
+					
+				
+				
+				
+				
+				
+				
+				
 			}
 
 	}
