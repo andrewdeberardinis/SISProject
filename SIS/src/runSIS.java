@@ -87,6 +87,8 @@ public class runSIS
 					} 
 				
 				// go back to menu option
+				// I'm like that
+				
 				
 				System.out.println("Where do you want to go next");
 				System.out.println("(1) - Return to Main Menu");
@@ -107,12 +109,12 @@ public class runSIS
 						System.out.println("Going back to Sorter menu");
 						SortingMenu.sortingChoices();
 					}
+				else 
+					{
+						System.out.println("Returning to main menu...");
+						displayMenu();
+					}
 					
-				
-				
-				
-				
-				
 				
 				
 			}
