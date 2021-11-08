@@ -107,6 +107,8 @@ public class runSIS
 						displayMenu();
 					}
 				
+				// Option 2
+				
 				else if (supaanswer == 2)
 					{
 						System.out.println("Going back to Sorter menu");
