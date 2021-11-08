@@ -8,7 +8,7 @@ public class GPACalculator
 		static double cumGPA = 0;
 		DecimalFormat d = new DecimalFormat("0.00");
 		
-		
+		//I dont think GPA calculator works
 		public static void GPACounter()
 		{
 		
@@ -82,8 +82,7 @@ public class GPACalculator
 							firstGPA = firstGPA + 0.00;
 						}
 					
-				
-					
+			
 			//second class GPA
 					
 					if(runSIS.listOfStudents.get(i).getSecondgrade().equals("A"))
@@ -217,17 +216,22 @@ public class GPACalculator
 						}
 					
 					cumGPA = firstGPA + secondGPA + thirdGPA;
-					cumGPA = cumGPA/3;
 					
+					//cumGPA = cumGPA/3;
+					// I dont think this GPA calculator code works
 			        DecimalFormat d = new DecimalFormat("0.00");
 			        System.out.println((d.format(cumGPA)));
-			          
 			        runSIS.listOfStudents.get(i).setGpa(cumGPA);  
-					
-					
-			
-			
+			        
+			        firstGPA = 0;
+					secondGPA = 0;
+					thirdGPA = 0;
+					cumGPA = 0;
 				}
+					
+			
+			     
+				
 		}
 		
 		

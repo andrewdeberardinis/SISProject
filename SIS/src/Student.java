@@ -12,7 +12,7 @@ public class Student
 		private String thirdperiod;
 		private String thirdgrade;
 		
-		public Student(String fn, String ln, String fp, String sp, String tp, String fg, String sg, String tg)
+		public Student(String fn, String ln, String fp, String fg, String sp, String sg, String tp, String tg)
 		{
 		
 		firstname = fn;
@@ -95,17 +95,14 @@ public class Student
 			{
 				this.firstgrade = firstgrade;
 			}
-
 		public String getSecondgrade()
-			{
-				return secondgrade;
-			}
-
+		{
+			return secondgrade;
+		}
 		public void setSecondgrade(String secondgrade)
-			{
-				this.secondgrade = secondgrade;
-			}
-
+		{
+			this.secondgrade = secondgrade;
+		}
 		public String getThirdgrade()
 			{
 				return thirdgrade;

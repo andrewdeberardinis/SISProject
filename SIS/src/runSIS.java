@@ -13,6 +13,7 @@ public class runSIS
 
 		public static void main(String[] args) throws IOException
 			{
+				//main method takes the student text and sends it into an array list
 				Scanner file = new Scanner(new File("StudentList.txt"));
 				while(file.hasNext())
 					{
@@ -21,13 +22,22 @@ public class runSIS
 
 					listOfStudents.add(new Student(filler[0],filler[1],filler[2],filler[3],filler[4],filler[5],filler[6],filler[7]));
 					}
+<<<<<<< HEAD
 						displayMenu();
 					}
 			
+=======
+				//GPACalculator.GPACounter();
+					GPACalcV2.GPACounter();
+					displayMenu();
+    }
+				
+>>>>>>> upstream/master
 				//displayStudentList();
 
+
 			
-		
+		//menu is fixed
 		public static void displayMenu()
 			{
 				Scanner userIntInput = new Scanner(System.in);
@@ -35,32 +45,53 @@ public class runSIS
 				System.out.println("(1) - add or delete a student");
 				System.out.println("(2) - change student grades/schedule");
 				System.out.println("(3) - sort students");
+				System.out.println("(4) - display the students");
+				System.out.println("(5) - Show the parents a GPA");
 				int userChoice = userIntInput.nextInt();
 				if(userChoice == 1)
 					{
+						//sends user to the studentAction class
 						studentStatus.studentAction();
 					}
 				else if(userChoice == 2)
 					{
-						
+						//sends user to the changing student grade and schedule class
+						ChangeStudentClass.change();
 					}
 				else if(userChoice == 3)
 					{
-						
+						//sends user to the sorting menu before asking them how they want to sort
+						SortingMenu.sortingChoices();
 					}
+				else if(userChoice == 4)
+					{
+						//displays the student list
+						displayStudentList();
+					}
+				else if(userChoice == 5)
+				{
+					ShowingParentsGPA.showingParents();
+				}
 				else
 					{
+						//#breakproof
 						System.out.println("You must pick either 1, 2 or 3");
 						displayMenu();
 					}
 			}
-		
+
+		//displayStudentList method displays students
 		public static void displayStudentList()
+
 			{
 				for(Student s : listOfStudents)
 					{
-						System.out.println(s.getFirstname() + s.getLastname() + s.getFirstperiod() + s.getFirstgrade() + s.getSecondperiod() + s.getSecondgrade() + s.getThirdperiod() + s.getThirdgrade());
+						System.out.printf("%18-s" , " Name " , s.getFirstname() + " " + s.getLastname());
+						System.out.printf("GPA: %.2f" , s.getGpa());
+						System.out.printf("%8-s %2-s" , " P1 " + s.getFirstperiod() , s.getFirstgrade());
+						System.out.printf("%8-s %2-s" , " P2 " + s.getSecondperiod() , s.getSecondgrade());
+						System.out.printf("%8-s %2-s" , " P3 " + s.getThirdperiod() , s.getThirdgrade()) + "\n";
 					}
 			}
-	
+
 	}
